@@ -11,6 +11,8 @@ fstream
 -
 string
 -
+iostream
+-
 my_vector.h
 /Users/fang/Desktop/c++/final_work_2/head/my_vector.h
 Node.h
@@ -21,6 +23,8 @@ quick_sort.h
 /Users/fang/Desktop/c++/final_work_2/head/quick_sort.h
 string_to_hush.h
 /Users/fang/Desktop/c++/final_work_2/head/string_to_hush.h
+dijsktra.h
+/Users/fang/Desktop/c++/final_work_2/head/dijsktra.h
 
 /Users/fang/Desktop/c++/final_work_2/head/HushList.h
 string
@@ -40,6 +44,22 @@ vector
 my_vector.h
 /Users/fang/Desktop/c++/final_work_2/head/my_vector.h
 
+/Users/fang/Desktop/c++/final_work_2/head/dijsktra.h
+my_vector.h
+/Users/fang/Desktop/c++/final_work_2/head/my_vector.h
+
+/Users/fang/Desktop/c++/final_work_2/head/functions.h
+string
+-
+Graph.h
+/Users/fang/Desktop/c++/final_work_2/head/Graph.h
+kmp.h
+/Users/fang/Desktop/c++/final_work_2/head/kmp.h
+
+/Users/fang/Desktop/c++/final_work_2/head/kmp.h
+string
+-
+
 /Users/fang/Desktop/c++/final_work_2/head/my_vector.h
 
 /Users/fang/Desktop/c++/final_work_2/head/quick_sort.h
@@ -51,17 +71,25 @@ string
 /Users/fang/Desktop/c++/final_work_2/head/string_to_hush.h
 
 /Users/fang/Desktop/c++/final_work_2/head/test.h
-my_vector.h
-/Users/fang/Desktop/c++/final_work_2/head/my_vector.h
 iostream
 -
+my_vector.h
+/Users/fang/Desktop/c++/final_work_2/head/my_vector.h
 binary_search.h
 /Users/fang/Desktop/c++/final_work_2/head/binary_search.h
+Graph.h
+/Users/fang/Desktop/c++/final_work_2/head/Graph.h
+dijsktra.h
+/Users/fang/Desktop/c++/final_work_2/head/dijsktra.h
+
+/Users/fang/Desktop/c++/final_work_2/head/ui.h
 
 /Users/fang/Desktop/c++/final_work_2/main.cpp
 iostream
 -
 fstream
+-
+cstdlib
 -
 head/Graph.h
 /Users/fang/Desktop/c++/final_work_2/head/Graph.h
@@ -71,4 +99,8 @@ head/HushList.h
 /Users/fang/Desktop/c++/final_work_2/head/HushList.h
 head/my_vector.h
 /Users/fang/Desktop/c++/final_work_2/head/my_vector.h
+head/ui.h
+/Users/fang/Desktop/c++/final_work_2/head/ui.h
+head/functions.h
+/Users/fang/Desktop/c++/final_work_2/head/functions.h
 

@@ -12,7 +12,7 @@ using namespace std;
 
 typedef struct dNode{
     bool flag = true;
-    int path[MaxSize];
+    int path[200];
     int node_num=0;
     int length=0;
 }dNode;

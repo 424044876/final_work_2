@@ -92,6 +92,12 @@
 		<Unit filename="/Users/fang/Desktop/c++/final_work_2/head/binary_search.h">
 			<Option target="final_work_2"/>
 		</Unit>
+		<Unit filename="/Users/fang/Desktop/c++/final_work_2/head/functions.h">
+			<Option target="final_work_2"/>
+		</Unit>
+		<Unit filename="/Users/fang/Desktop/c++/final_work_2/head/kmp.h">
+			<Option target="final_work_2"/>
+		</Unit>
 		<Unit filename="/Users/fang/Desktop/c++/final_work_2/head/my_vector.h">
 			<Option target="final_work_2"/>
 		</Unit>
@@ -102,6 +108,9 @@
 			<Option target="final_work_2"/>
 		</Unit>
 		<Unit filename="/Users/fang/Desktop/c++/final_work_2/head/test.h">
+			<Option target="final_work_2"/>
+		</Unit>
+		<Unit filename="/Users/fang/Desktop/c++/final_work_2/head/ui.h">
 			<Option target="final_work_2"/>
 		</Unit>
 		<Unit filename="/Users/fang/Desktop/c++/final_work_2/main.cpp">

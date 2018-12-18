@@ -17,12 +17,15 @@
 
 #include <fstream>
 #include <string>
+#include <iostream>
 
 #include "my_vector.h"
 #include "Node.h"
 #include "HushList.h"
 #include "quick_sort.h"
 #include "string_to_hush.h"
+#include "dijsktra.h"
+
 
 using namespace std;
 
@@ -37,12 +40,15 @@ public:
     Graph(){}
     ~Graph(){}
 
-    int get_num(){
+    int get_places_num(){
         return places_num;
     }
 
-    void set_num(int n){
-        places_num = n;
+    Node& get_place(int i){
+        if(i<1||i>places_num){
+            return places[0];
+        }
+        return places[i];
     }
 
     void set_key(){
@@ -71,6 +77,11 @@ public:
             }
         }
         return -1;
+    }
+
+    Node& operator[](string name){
+        int index = hush_find(name);
+        return places[index];
     }
 
     void load_graph_from_file(string path="/Users/fang/Desktop/c++/final_work_2/map.txt"){
@@ -115,6 +126,23 @@ public:
             matrix[nb][na]=distance;
         }
         fin.close();
+    }
+
+    Vector<dNode> ans;
+    void renew_ans(int tar){
+        ans.resize(places_num+1);
+        Dijsktra(matrix, ans, 2);
+    }
+
+    void show_places(){
+        for (int i = 0+1; i < places_num+1; ++i) {
+            cout<<places[i].get_name();
+            if(i%4==0){
+                cout<<endl;
+            } else{
+                cout<<'\t';
+            }
+        }
     }
 
     void repr_graph(){
