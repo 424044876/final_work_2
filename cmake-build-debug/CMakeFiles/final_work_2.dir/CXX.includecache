@@ -7,12 +7,12 @@
 #IncludeRegexTransform: 
 
 /Users/fang/Desktop/c++/final_work_2/head/Graph.h
-vector
--
 fstream
 -
 string
 -
+my_vector.h
+/Users/fang/Desktop/c++/final_work_2/head/my_vector.h
 Node.h
 /Users/fang/Desktop/c++/final_work_2/head/Node.h
 HushList.h

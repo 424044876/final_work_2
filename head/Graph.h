@@ -6,18 +6,19 @@
 /*
  *
  * I use class Graph to represent school
- * The 1-D vector 'places' is used to represent places of school
- * and the 2-D vector 'matrix' is an adjacency matrix to represent distance between each place
+ * The 1-D Vector 'places' is used to represent places of school
+ * and the 2-D Vector 'matrix' is an adjacency matrix to represent distance between each place
  *
 */
 
 #ifndef FINAL_WORK_2_GRAPH_H
 #define FINAL_WORK_2_GRAPH_H
 
-#include <vector>
+
 #include <fstream>
 #include <string>
 
+#include "my_vector.h"
 #include "Node.h"
 #include "HushList.h"
 #include "quick_sort.h"
@@ -27,8 +28,8 @@ using namespace std;
 
 class Graph {
 private:
-    vector<Node> places;
-    vector<vector<int>> matrix;
+    Vector<Node> places;
+    Vector<Vector<int>> matrix;
     HushList<Node> hush_list;
     int places_num;
     int road_num;
@@ -98,7 +99,7 @@ public:
 
         //
         //to initialize the adjacency matrix
-        vector<int> tmp(p+1, 1e7);
+        Vector<int> tmp(p+1, 1e7);
         matrix.resize(p+1, tmp);
         //
         //load roads
