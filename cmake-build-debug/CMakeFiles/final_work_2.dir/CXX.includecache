@@ -29,10 +29,10 @@ dijsktra.h
 /Users/fang/Desktop/c++/final_work_2/head/HushList.h
 string
 -
-vector
--
 list
 -
+my_vector.h
+/Users/fang/Desktop/c++/final_work_2/head/my_vector.h
 
 /Users/fang/Desktop/c++/final_work_2/head/Node.h
 string
@@ -50,6 +50,8 @@ my_vector.h
 
 /Users/fang/Desktop/c++/final_work_2/head/functions.h
 string
+-
+iostream
 -
 Graph.h
 /Users/fang/Desktop/c++/final_work_2/head/Graph.h
@@ -81,7 +83,19 @@ Graph.h
 /Users/fang/Desktop/c++/final_work_2/head/Graph.h
 dijsktra.h
 /Users/fang/Desktop/c++/final_work_2/head/dijsktra.h
+functions.h
+/Users/fang/Desktop/c++/final_work_2/head/functions.h
 
+/Users/fang/Desktop/c++/final_work_2/head/ui.h
+
+/Users/fang/Desktop/c++/final_work_2/head/work.h
+string
+-
+Graph.h
+/Users/fang/Desktop/c++/final_work_2/head/Graph.h
+functions.h
+/Users/fang/Desktop/c++/final_work_2/head/functions.h
+ui.h
 /Users/fang/Desktop/c++/final_work_2/head/ui.h
 
 /Users/fang/Desktop/c++/final_work_2/main.cpp
@@ -93,14 +107,8 @@ cstdlib
 -
 head/Graph.h
 /Users/fang/Desktop/c++/final_work_2/head/Graph.h
+head/work.h
+/Users/fang/Desktop/c++/final_work_2/head/work.h
 head/test.h
 /Users/fang/Desktop/c++/final_work_2/head/test.h
-head/HushList.h
-/Users/fang/Desktop/c++/final_work_2/head/HushList.h
-head/my_vector.h
-/Users/fang/Desktop/c++/final_work_2/head/my_vector.h
-head/ui.h
-/Users/fang/Desktop/c++/final_work_2/head/ui.h
-head/functions.h
-/Users/fang/Desktop/c++/final_work_2/head/functions.h
 

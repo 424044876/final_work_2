@@ -131,7 +131,7 @@ public:
     Vector<dNode> ans;
     void renew_ans(int tar){
         ans.resize(places_num+1);
-        Dijsktra(matrix, ans, 2);
+        Dijsktra(matrix, ans, tar);
     }
 
     void show_places(){

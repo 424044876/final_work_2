@@ -12,8 +12,8 @@ using namespace std;
 
 typedef struct dNode{
     bool flag = true;
-    int path[200];
-    int node_num=0;
+    int path[200];                  //begin from 0
+    int node_num=0;                 //begin from 0
     int length=0;
 }dNode;
 

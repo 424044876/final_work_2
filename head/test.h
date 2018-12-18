@@ -10,7 +10,7 @@
 #include "binary_search.h"
 #include "Graph.h"
 #include "dijsktra.h"
-
+#include "functions.h"
 using namespace std;
 
 void test_binary_search(){

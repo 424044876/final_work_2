@@ -13,5 +13,6 @@ CMakeFiles/final_work_2.dir/main.cpp.o: ../head/quick_sort.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/string_to_hush.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/test.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/ui.h
+CMakeFiles/final_work_2.dir/main.cpp.o: ../head/work.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../main.cpp
 
