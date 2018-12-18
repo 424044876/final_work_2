@@ -9,6 +9,5 @@
 using namespace std;
 
 int main() {
-    test_binary_search();
 
 }

@@ -19,4 +19,10 @@ void test_binary_search(){
     cout<<my_binary_search(a, 4, 0, 9);
 }
 
+void testGraph(){
+    Graph g;
+    g.load_graph_from_file();
+    g.repr_graph();
+}
+
 #endif //FINAL_WORK_2_TEST_H
