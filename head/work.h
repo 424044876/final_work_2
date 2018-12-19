@@ -46,7 +46,8 @@ void work(Graph &g){
                     sub1_2_1();
                     func1_2_1(g);
                 }
-            } else{
+            }
+            else{
                 continue;
             }
         }
@@ -74,12 +75,25 @@ void work(Graph &g){
                     sub2_1_3();
                     func2_1_3(g);
                 }
+                else if(s21==4){
+                    system("clear");
+                    sub2_1_4();
+                    func2_1_4(g);
+                }
+                else if(s21==5){
+                    system("clear");
+                    sub2_1_5();
+                    func2_1_5(g);
+                }
             }
             else{
                 continue;
             }
         }
-
+        else if(n == 3){
+            system("clear");
+            sub3(g);
+        }
         //
         //exit
         else{

@@ -79,6 +79,12 @@ public:
         return this->arc_length<arc_2.arc_length;
     }
 
+    bool operator>(Arc arc_2){
+        return this->arc_length>arc_2.arc_length;
+    }
+
+
+
     Arc& operator=(Arc another){
         a_k = another.a_k;
         b_k = another.b_k;

@@ -26,6 +26,7 @@
 #include "string_to_hush.h"
 #include "dijsktra.h"
 #include "arc.h"
+#include "kruskal.h"
 
 using namespace std;
 
@@ -59,7 +60,7 @@ public:
 
     void build_hush_list(){
         set_key();
-
+        hush_list.clear();
         for (int i = 1; i < places_num+1; ++i) {
             int hush_key = string_hush(places[i].get_name());
             hush_list[hush_key].push_back(places[i]);
@@ -173,6 +174,28 @@ public:
         matrix[k2][k1] = road_length;
     }
 
+    void delete_place(string place){
+        int k = hush_find(place);
+        places.dele(k);
+        for (int i = 0; i < places_num+1; ++i) {
+            matrix[i].dele(k);
+        }
+        matrix.dele(k);
+        places_num--;
+        road_num=0;
+        for (int i = 0; i < places_num+1; ++i) {
+            for (int j = 0; j < places_num+1; ++j) {
+                if(matrix[i][j]!=1e7){
+                    road_num++;
+                }
+            }
+        }
+        road_num/=2;
+        set_key();
+
+        //hush delete
+    }
+
     void get_arcs(Vector<Arc> &answer){
         answer.resize(road_num+1);
         int p=1;
@@ -217,11 +240,22 @@ public:
         file_out.close();
     }
 
+    void mini_tree(){
+        Vector <Arc> ans;
+        get_arcs(ans);
+        Vector <Arc> final;
+        int length = Kruskal(places_num, ans, final);
+        for (int i = 0; i < places_num-1; ++i) {
+            cout<<final[i].get_a()<<" -- "<<final[i].get_b()<<endl;
+            cout<<"最短距离为："<<length<<endl;
+        }
+    }
+
 
     void repr_graph(){
         cout<<places_num<<' '<<road_num<<endl;
         for (int i = 1; i < places_num+1; ++i) {
-            cout<<places[i].get_name()<<" "<<places[i].get_repo()<<endl;
+            cout<<places[i].get_name()<<" "<<places[i].get_repo()<<' '<<places[i].get_key()<<endl;
         }
         for (int i = 1; i<places_num+1; ++i){
             for (int j = 1; j < places_num+1; ++j) {

@@ -27,6 +27,8 @@ dijsktra.h
 /Users/fang/Desktop/c++/final_work_2/head/dijsktra.h
 arc.h
 /Users/fang/Desktop/c++/final_work_2/head/arc.h
+kruskal.h
+/Users/fang/Desktop/c++/final_work_2/head/kruskal.h
 
 /Users/fang/Desktop/c++/final_work_2/head/HushList.h
 string
@@ -65,6 +67,16 @@ kmp.h
 /Users/fang/Desktop/c++/final_work_2/head/kmp.h
 string
 -
+
+/Users/fang/Desktop/c++/final_work_2/head/kruskal.h
+iostream
+-
+my_vector.h
+/Users/fang/Desktop/c++/final_work_2/head/my_vector.h
+arc.h
+/Users/fang/Desktop/c++/final_work_2/head/arc.h
+quick_sort.h
+/Users/fang/Desktop/c++/final_work_2/head/quick_sort.h
 
 /Users/fang/Desktop/c++/final_work_2/head/my_vector.h
 

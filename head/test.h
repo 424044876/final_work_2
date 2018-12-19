@@ -74,4 +74,18 @@ void test_save(){
     g.save_graph();
 }
 
+void test_delete(){
+    string pl = "主楼";
+    Graph g;
+    g.load_graph_from_file();
+    g.delete_place(pl);
+    g.repr_graph();
+}
+
+void test_mini_tree(){
+    Graph g;
+    g.load_graph_from_file();
+    g.mini_tree();
+}
+
 #endif //FINAL_WORK_2_TEST_H

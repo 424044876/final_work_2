@@ -176,5 +176,55 @@ void func2_1_3(Graph &g){
 }
 
 
+void func2_1_4(Graph &g){
+    g.show_places();
+    cout<<endl;
+    string hint1 = "输入要删除的地点：";
+    string hint2 = "没有该地点";
+    string hint3 = "输入r返回首页";
+    string hint4 = "删除成功";
+    string pla;
+    cin>>pla;
+    if(g.hush_find(pla)==-1){
+        cout<<hint2<<endl;
+        cout<<hint3<<endl;
+        cin>>pla;
+        return;
+    }
+    g.delete_place(pla);
+    g.show_places();
+    cout<<endl;
+    cout<<hint4<<endl;
+    cout<<hint3<<endl;
+    cin>>pla;
+}
+
+void func2_1_5(Graph &g){
+    g.show_places();
+    cout<<endl;
+    string hint1 = "输入要删除路径的起点：";
+    string hint2 = "输入要删除路径的终点：";
+    string hint3 = "删除成功";
+    string hint4 = "输入r返回首页";
+    string hint5 = "删除失败，没有该地点";
+    string road_beg,road_end;
+    cout<<hint1<<endl;
+    cin>>road_beg;
+    cout<<hint2<<endl;
+    cin>>road_end;
+    if(g.hush_find(road_beg)==-1||g.hush_find(road_end)==-1){
+        cout<<hint5<<endl;
+        cout<<hint4<<endl;
+        cin>>road_beg;
+        return;
+    }
+    g.add_road(road_beg, road_end, 1e7);
+    cout<<hint3<<endl;
+    cout<<hint4<<endl;
+    cin>>road_beg;
+}
+
+
+
 
 #endif //FINAL_WORK_2_FUNCTIONS_H

@@ -32,6 +32,7 @@ void Dijsktra(Vector<Vector<int>> mat, Vector<dNode> &ans, int tar){
             cur[i].node_num++;
         }
     }
+
     ans[0].length=1e6;
     for (int i = 1; i < v; ++i) {
         //select
@@ -62,6 +63,7 @@ void Dijsktra(Vector<Vector<int>> mat, Vector<dNode> &ans, int tar){
             }
         }
     }
+
 }
 
 

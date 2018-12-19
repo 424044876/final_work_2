@@ -27,6 +27,9 @@ public:
         return hl[n];
     }
 
+    void clear(){
+        hl.resize(50);
+    }
 };
 
 

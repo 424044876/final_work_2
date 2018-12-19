@@ -15,12 +15,14 @@ int main_ui(){
     string main_t = "---------------主界面--------------";
     string fun1 = "1. 前台服务";
     string fun2 = "2. 后台服务";
+    string fun3 = "3. 网线布线助手";
     string ret = "0. 退出";
 
     cout<<title<<endl
         <<main_t<<endl
         <<fun1<<endl
         <<fun2<<endl
+        <<fun3<<endl
         <<ret<<endl;
 
     int n;
@@ -178,7 +180,7 @@ void sub2_1_2(){
 
 void sub2_1_3(){
     string title = "******北林自助导游及信息服务系统******";
-    string sub_t = "-----------增加一条新的路径----------";
+    string sub_t = "----------增加一条新的路径-----------";
     cout<<title<<endl
         <<sub_t<<endl;
 };
@@ -186,18 +188,27 @@ void sub2_1_3(){
 
 void sub2_1_4(){
     string title = "******北林自助导游及信息服务系统******";
-    string sub_t = "----------增加一条新的路径-----------";
+    string sub_t = "-------删除一个景点及其相关信息-------";
     cout<<title<<endl
         <<sub_t<<endl;
 };
 
 void sub2_1_5(){
     string title = "******北林自助导游及信息服务系统******";
-    string sub_t = "------删除一个景点及其相关信息--------";
+    string sub_t = "------------删除一条路径------------";
     cout<<title<<endl
         <<sub_t<<endl;
 };
 
+void sub3(Graph &g){
+    string title = "******北林自助导游及信息服务系统******";
+    string sub_t = "------------网线布线助手------------";
+    string hint = "输入r返回首页";
+    g.mini_tree();
+    cout<<hint<<endl;
+    string tmp;
+    cin>>tmp;
+}
 
 
 #endif //FINAL_WORK_2_UI_H
