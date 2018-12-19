@@ -6,13 +6,14 @@
 #define FINAL_WORK_2_QUICK_SORT_H
 
 
-#include <vector>
 #include <string>
+
+#include "my_vector.h"
 
 using namespace std;
 
 template <typename T>
-int classify(vector<T> &array, int beg, int end){         //[]  beg and end is subscripts but [)
+int classify(Vector<T> &array, int beg, int end){         //[]  beg and end is subscripts but [)
     if(beg==end){
         return beg;
     }
@@ -40,7 +41,7 @@ int classify(vector<T> &array, int beg, int end){         //[]  beg and end is s
 
 
 template <typename T>
-void quick_sort(vector<T> &array, int beg, int end){    //[]
+void quick_sort(Vector<T> &array, int beg, int end){    //[]
     if(beg>=end){
         return;
     }

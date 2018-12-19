@@ -6,7 +6,6 @@
 #define FINAL_WORK_2_HUSHLIST_H
 
 #include <string>
-//#include <Vector>
 #include <list>
 
 #include "my_vector.h"

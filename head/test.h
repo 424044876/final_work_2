@@ -34,4 +34,44 @@ void test_dij(){
     cout<<g.ans[3].length<<endl;
 }
 
+void test_my_vector(){
+    Vector <int> v(10);
+    for (int i = 0; i < v.size(); ++i) {
+        v[i]=i;
+    }
+    v.dele(2);
+    for (int i = 0; i < v.size(); ++i) {
+        cout<<v[i]<<' ';
+    }
+    cout<<endl;
+    v.insert(2, 2);
+    for (int i = 0; i < v.size(); ++i) {
+        cout<<v[i]<<' ';
+    }
+    cout<<endl;
+    Vector <int> v2;
+    v2 = v;
+    v[2]=100;
+    for (int j = 0; j < v2.size(); ++j) {
+        cout<<v2[j]<<' ';
+    }
+    cout<<endl;
+}
+
+void test_add_place(){
+    Graph g;
+    g.load_graph_from_file();
+    Node tmp("学研中心");
+    tmp.set_repo("自我介绍");
+    g.add_place(tmp);
+    g.repr_graph();
+}
+
+
+void test_save(){
+    Graph g;
+    g.load_graph_from_file();
+    g.save_graph();
+}
+
 #endif //FINAL_WORK_2_TEST_H

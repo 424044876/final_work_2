@@ -14,7 +14,6 @@
 #define FINAL_WORK_2_NODE_H
 
 #include <string>
-#include <vector>
 
 using namespace std;
 
@@ -31,6 +30,11 @@ public:
         name = n;
     }
 
+    Node(string n, string r){
+        name = n;
+        repo = r;
+    }
+
     void add_repo(string t){
         repo+=t;
     }
@@ -40,12 +44,15 @@ public:
         key = k;
     }
 
-    int get_key(){
-        return key;
-    }
-
     void set_name(string n){
         name = n;
+    }
+
+    void set_repo(string n){
+        repo = n;
+    }
+    int get_key(){
+        return key;
     }
 
     string get_name(){
@@ -54,6 +61,13 @@ public:
 
     string& get_repo(){
         return repo;
+    }
+
+    Node& operator=(Node &another_node){
+        key = another_node.key;
+        name = another_node.name;
+        repo = another_node.repo;
+        return *this;
     }
 
     bool operator<(const Node b){

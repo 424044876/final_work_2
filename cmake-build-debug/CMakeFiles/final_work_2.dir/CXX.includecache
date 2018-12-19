@@ -25,6 +25,8 @@ string_to_hush.h
 /Users/fang/Desktop/c++/final_work_2/head/string_to_hush.h
 dijsktra.h
 /Users/fang/Desktop/c++/final_work_2/head/dijsktra.h
+arc.h
+/Users/fang/Desktop/c++/final_work_2/head/arc.h
 
 /Users/fang/Desktop/c++/final_work_2/head/HushList.h
 string
@@ -37,7 +39,9 @@ my_vector.h
 /Users/fang/Desktop/c++/final_work_2/head/Node.h
 string
 -
-vector
+
+/Users/fang/Desktop/c++/final_work_2/head/arc.h
+string
 -
 
 /Users/fang/Desktop/c++/final_work_2/head/binary_search.h
@@ -65,10 +69,10 @@ string
 /Users/fang/Desktop/c++/final_work_2/head/my_vector.h
 
 /Users/fang/Desktop/c++/final_work_2/head/quick_sort.h
-vector
--
 string
 -
+my_vector.h
+/Users/fang/Desktop/c++/final_work_2/head/my_vector.h
 
 /Users/fang/Desktop/c++/final_work_2/head/string_to_hush.h
 
@@ -87,9 +91,15 @@ functions.h
 /Users/fang/Desktop/c++/final_work_2/head/functions.h
 
 /Users/fang/Desktop/c++/final_work_2/head/ui.h
+string
+-
+iostream
+-
 
 /Users/fang/Desktop/c++/final_work_2/head/work.h
 string
+-
+cstdlib
 -
 Graph.h
 /Users/fang/Desktop/c++/final_work_2/head/Graph.h
@@ -102,8 +112,6 @@ ui.h
 iostream
 -
 fstream
--
-cstdlib
 -
 head/Graph.h
 /Users/fang/Desktop/c++/final_work_2/head/Graph.h

@@ -7,6 +7,7 @@
 
 
 #include <string>
+#include <cstdlib>
 
 #include "Graph.h"
 #include "functions.h"
@@ -17,6 +18,8 @@ void work(Graph &g){
         system("clear");
         int n=main_ui();
 
+        //
+        //front
         if(n==1){
             system("clear");
             int s1 = sub_1();
@@ -48,11 +51,37 @@ void work(Graph &g){
             }
         }
 
+        //
+        //after
         else if(n==2){
             system("clear");
-            int s2 = sub_2();
+            int s2 = sub2();
+            if(s2){
+                system("clear");
+                int s21 = sub2_1();
+                if(s21==1){
+                    system("clear");
+                    sub2_1_1();
+                    func2_1_1(g);
+                }
+                else if(s21==2){
+                    system("clear");
+                    sub2_1_2();
+                    func2_1_2(g);
+                }
+                else if(s21==3){
+                    system("clear");
+                    sub2_1_3();
+                    func2_1_3(g);
+                }
+            }
+            else{
+                continue;
+            }
         }
 
+        //
+        //exit
         else{
             break;
         }

@@ -14,7 +14,7 @@ using namespace std;
 void func1_1_1(Graph &g){
     string hint1 = "本系统提供一下景点：";
     string hint2 = "请输入景点名称：";
-    string hint3 = "的相关信息为";
+    string hint3 = "的相关信息为：";
     string hint4 = "输入r返回首页";
     string hint5 = "查询失败";
     cout<<hint1<<endl;
@@ -31,7 +31,7 @@ void func1_1_1(Graph &g){
     }
     string rer = g[tar].get_repo();
     cout<<tar;
-    cout<<hint3;
+    cout<<hint3<<endl;
     cout<<rer<<endl;
     cout<<hint4<<endl;
     cin>>tmp;
@@ -98,5 +98,83 @@ void func1_2_1(Graph &g){
     cout<<hint4<<endl;
     cin>>tmp;
 }
+
+void func2_1_1(Graph &g){
+    string hint1 = "输入要修改的景点名称：";
+    string hint2 = "输入新的信息：";
+    string hint3 = "修改成功";
+    string hint4 = "输入r返回首页";
+    string hint5 = "没有该地点";
+    string hint6 = "当前信息：";
+    g.show_places();
+    cout<<endl;
+    cout<<hint1<<endl;
+    string name, new_repo;
+    cin>>name;
+    if(g.hush_find(name)==-1){
+        cout<<hint5<<endl;
+        cout<<hint4<<endl;
+        cin>>name;
+        return;
+    }
+    cout<<hint6<<endl;
+    cout<<g[name].get_repo()<<endl;
+    cout<<hint2<<endl;
+    cin>>new_repo;
+    g.renew_repo(name, new_repo);
+    cout<<hint3<<endl
+    <<hint4<<endl;
+    cin>>name;
+}
+
+void func2_1_2(Graph &g){
+    string hint1 = "输入要增加的景点名称：";
+    string hint2 = "输入要增加的景点信息：";
+    string hint3 = "增加成功";
+    string hint4 = "输入r返回首页";
+    g.show_places();
+    cout<<endl;
+    string name, repo;
+    cout<<hint1<<endl;
+    cin>>name;
+    cout<<hint2<<endl;
+    cin>>repo;
+    Node new_place(name, repo);
+    g.add_place(new_place);
+    cout<<hint3<<endl;
+    cout<<hint4<<endl;
+    string tmp;
+    cin>>tmp;
+}
+
+void func2_1_3(Graph &g){
+    g.show_places();
+    cout<<endl;
+    string hint1 = "输入要增加路径的起点：";
+    string hint2 = "输入要增加路径的终点：";
+    string hint3 = "输入要增加的路径的距离：";
+    string hint4 = "添加成功";
+    string hint5 = "输入r返回首页";
+    string hint6 = "添加失败，没有该地点，请先添加地点";
+    string road_beg,road_end;
+    int road_length;
+    cout<<hint1<<endl;
+    cin>>road_beg;
+    cout<<hint2<<endl;
+    cin>>road_end;
+    cout<<hint3;
+    cin>>road_length;
+    if(g.hush_find(road_beg)==-1||g.hush_find(road_end)==-1){
+        cout<<hint6<<endl;
+        cout<<hint5<<endl;
+        cin>>road_beg;
+        return;
+    }
+    g.add_road(road_beg, road_end, road_length);
+    cout<<hint4<<endl;
+    cout<<hint5;
+}
+
+
 
 #endif //FINAL_WORK_2_FUNCTIONS_H

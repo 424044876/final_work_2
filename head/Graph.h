@@ -25,7 +25,7 @@
 #include "quick_sort.h"
 #include "string_to_hush.h"
 #include "dijsktra.h"
-
+#include "arc.h"
 
 using namespace std;
 
@@ -51,7 +51,7 @@ public:
         return places[i];
     }
 
-    void set_key(){
+    void set_key(){                             //key begin from 1
         for (int i = 0; i < places_num+1; ++i) {
             places[i].set_key(i);
         }
@@ -145,6 +145,79 @@ public:
         }
     }
 
+    void add_place(Node &p){
+        places_num++;
+        p.set_key(places_num);
+        places.insert(places_num, p);
+        Vector<int> tmp(places_num+1, 1e7);
+        Vector<Vector<int>> new_matrix(places_num+1, tmp);
+        for (int i = 0; i < places_num-1; ++i) {
+            for (int j = 0; j < places_num-1; ++j) {
+                new_matrix[i][j] = matrix[i][j];
+            }
+        }
+        matrix.resize(places_num, tmp);
+        for (int i = 0; i < places_num-1; ++i) {
+            for (int j = 0; j < places_num-1; ++j) {
+                matrix[i][j] = new_matrix[i][j];
+            }
+        }
+        int hush_key = string_hush(places[places_num].get_name());
+        hush_list[hush_key].push_back(places[places_num]);
+    }
+
+    void add_road(string road_beg, string road_end, int road_length){
+        int k1 = hush_find(road_beg);
+        int k2 = hush_find(road_end);
+        matrix[k1][k2] = road_length;
+        matrix[k2][k1] = road_length;
+    }
+
+    void get_arcs(Vector<Arc> &answer){
+        answer.resize(road_num+1);
+        int p=1;
+        for (int i = 1; i < places_num+1; ++i) {
+            for (int j = 1; j < places_num+1; ++j) {
+                if(i<j&&matrix[i][j] < 1e7){
+                    string name_i = places[i].get_name();
+                    string name_j = places[j].get_name();
+                    answer[p].set_all(name_i, name_j, i, j, matrix[i][j]);
+                    p++;
+                }
+            }
+        }
+    }
+
+    void renew_repo(string name, string new_repo){
+        int key = hush_find(name);
+        places[key].set_repo(new_repo);
+    }
+
+    void delete_road(string a, string b){
+        int a_k = hush_find(a);
+        int b_k = hush_find(b);
+        road_num--;
+        matrix[a_k][b_k] = 1e7;
+        matrix[b_k][a_k] = 1e7;
+    }
+
+    void save_graph(string file_path="/Users/fang/Desktop/c++/final_work_2/in.txt"){
+        fstream file_out;
+        file_out.open(file_path, ios::out| ios::in| ios::trunc);
+        file_out<<places_num<<' '<<road_num<<endl;
+        for (int i = 1; i < places_num+1; ++i) {
+            file_out<<places[i].get_name()<<' '<<places[i].get_repo()<<endl;
+        }
+        Vector <Arc> ans;
+        get_arcs(ans);
+        for (int i = 1; i < road_num; ++i) {
+            file_out<<ans[i].get_a()<<' '<<ans[i].get_b()<<' '<<ans[i].get_length()<<endl;
+        }
+        file_out<<ans[road_num].get_a()<<' '<<ans[road_num].get_b()<<' '<<ans[road_num].get_length();
+        file_out.close();
+    }
+
+
     void repr_graph(){
         cout<<places_num<<' '<<road_num<<endl;
         for (int i = 1; i < places_num+1; ++i) {
@@ -152,11 +225,17 @@ public:
         }
         for (int i = 1; i<places_num+1; ++i){
             for (int j = 1; j < places_num+1; ++j) {
-                cout<<matrix[i][j]<<' ';
+                if(matrix[i][j]==1e7){
+                    cout<<"∞\t";
+                    continue;
+                }
+                cout<<matrix[i][j]<<'\t';
             }
             cout<<endl;
         }
     }
+
+
 
 };
 

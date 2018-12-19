@@ -4,6 +4,7 @@
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/Graph.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/HushList.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/Node.h
+CMakeFiles/final_work_2.dir/main.cpp.o: ../head/arc.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/binary_search.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/dijsktra.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/functions.h
