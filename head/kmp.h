@@ -9,36 +9,36 @@
 #include <string>
 using namespace std;
 
-void cal_next(string str, int *next){
+void get_next(string str, int *next){
     int len = str.size();
     next[0] = -1;
-    int k = -1;
-    for (int q = 1; q <= len-1; q++){
-        while (k > -1 && str[k + 1] != str[q]){
-            k = next[k];
+    int key = -1;
+    for (int q = 1; q < len; q++){
+        while (key > -1 && str[key + 1] != str[q]){
+            key = next[key];
         }
-        if (str[k + 1] == str[q]){
-            k = k + 1;
+        if (str[key + 1] == str[q]){
+            key = key + 1;
         }
-        next[q] = k;
+        next[q] = key;
     }
 }
 
 
 
-int KMP(string str, string ptr){
-    int slen = str.size();
-    int plen = ptr.size();
-    int *next = new int[plen];
-    cal_next(ptr, next);
-    int k = -1;
-    for (int i = 0; i < slen; i++){
-        while (k >-1&& ptr[k + 1] != str[i])
-            k = next[k];
-        if (ptr[k + 1] == str[i])
-            k = k + 1;
-        if (k == plen-1) {
-            return i-plen+1;
+int KMP(string str, string sub_str){
+    int m_len = str.size();
+    int sub_len = sub_str.size();
+    int *next = new int[sub_len];
+    get_next(sub_str, next);
+    int key = -1;
+    for (int i = 0; i < m_len; i++){
+        while (key >-1&& sub_str[key + 1] != str[i])
+            key = next[key];
+        if (sub_str[key + 1] == str[i])
+            key = key + 1;
+        if (key == sub_len-1) {
+            return i-sub_len+1;
         }
     }
     return -1;

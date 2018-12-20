@@ -247,8 +247,8 @@ public:
         int length = Kruskal(places_num, ans, final);
         for (int i = 0; i < places_num-1; ++i) {
             cout<<final[i].get_a()<<" -- "<<final[i].get_b()<<endl;
-            cout<<"最短距离为："<<length<<endl;
         }
+        cout<<"最短距离为："<<length<<endl;
     }
 
     void print_path_from_string(string s){

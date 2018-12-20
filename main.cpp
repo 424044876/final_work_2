@@ -9,7 +9,6 @@
 using namespace std;
 
 int main() {
-
     Graph g;
     g.load_graph_from_file();
     work(g);
