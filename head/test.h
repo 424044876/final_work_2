@@ -88,4 +88,11 @@ void test_mini_tree(){
     g.mini_tree();
 }
 
+void test_DFS(){
+    Graph g;
+    g.load_graph_from_file();
+    g.get_all_path("南门", "二教");
+}
+
+
 #endif //FINAL_WORK_2_TEST_H

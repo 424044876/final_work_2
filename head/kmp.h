@@ -5,6 +5,7 @@
 #ifndef FINAL_WORK_2_KMP_H
 #define FINAL_WORK_2_KMP_H
 
+
 #include <string>
 using namespace std;
 

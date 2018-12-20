@@ -45,6 +45,12 @@ void work(Graph &g){
                     system("clear");
                     sub1_2_1();
                     func1_2_1(g);
+                } else if(s12 == 2){
+                    system("clear");
+                    sub1_2_2();
+                    func1_2_2(g);
+                } else{
+                    continue;
                 }
             }
             else{
@@ -96,6 +102,9 @@ void work(Graph &g){
         }
         //
         //exit
+        else if(n == 4){
+            g.save_graph();
+        }
         else{
             break;
         }

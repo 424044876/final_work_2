@@ -99,6 +99,25 @@ void func1_2_1(Graph &g){
     cin>>tmp;
 }
 
+void func1_2_2(Graph &g){
+    string hint1 = "输入起点：";
+    string hint2 = "输入终点:";
+    string hint3 = "没有该地点";
+    string hint4 = "输入r返回首页";
+    string big,end,tmp;
+    g.show_places();
+    cout<<endl;
+    cout<<hint1<<endl;
+    cin>>big;
+    cout<<hint2<<endl;
+    cin>>end;
+    if(g.get_all_path(big, end)==0){
+        cout<<hint3<<endl;
+    }
+    cout<<hint4;
+    cin>>tmp;
+}
+
 void func2_1_1(Graph &g){
     string hint1 = "输入要修改的景点名称：";
     string hint2 = "输入新的信息：";

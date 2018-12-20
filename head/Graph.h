@@ -27,6 +27,7 @@
 #include "dijsktra.h"
 #include "arc.h"
 #include "kruskal.h"
+#include "DFS_all_path.h"
 
 using namespace std;
 
@@ -122,7 +123,6 @@ public:
             fin>>a>>b>>distance;
             int na = hush_find(a);
             int nb = hush_find(b);
-//            cout<<na<<' '<<nb<<endl;
             matrix[na][nb]=distance;
             matrix[nb][na]=distance;
         }
@@ -251,24 +251,49 @@ public:
         }
     }
 
+    void print_path_from_string(string s){
+        for (int i = 0; i < s.size(); ++i) {
+            cout<<places[s[i]-'0'].get_name()<<' ';
+        }
+        cout<<endl;
+    }
+
+    int get_all_path(string sbeg, string send){
+        int beg = hush_find(sbeg);
+        int end = hush_find(send);
+        if(beg==-1||end==-1){
+            return 0;
+        }
+        DFS_ans="";
+        DFS_ans.push_back(beg+'0');
+        DFS_ans_num = 0;
+        DFS_anses.resize(100);
+        DFS_visited.resize(100, 0);
+        Vector<Vector<int>> tmp = matrix;
+        dfs(tmp, places_num, beg, end);
+        for (int i = 0; i < DFS_ans_num; ++i) {
+            print_path_from_string(DFS_anses[i]);
+        }
+        return 1;
+    }
 
     void repr_graph(){
         cout<<places_num<<' '<<road_num<<endl;
         for (int i = 1; i < places_num+1; ++i) {
             cout<<places[i].get_name()<<" "<<places[i].get_repo()<<' '<<places[i].get_key()<<endl;
         }
+        Vector<Vector<int>> tmp = matrix;
         for (int i = 1; i<places_num+1; ++i){
             for (int j = 1; j < places_num+1; ++j) {
-                if(matrix[i][j]==1e7){
+                if(tmp[i][j]==1e7){
                     cout<<"∞\t";
                     continue;
                 }
-                cout<<matrix[i][j]<<'\t';
+                cout<<tmp[i][j]<<'\t';
             }
             cout<<endl;
         }
     }
-
 
 
 };

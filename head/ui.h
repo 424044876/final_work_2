@@ -16,6 +16,7 @@ int main_ui(){
     string fun1 = "1. 前台服务";
     string fun2 = "2. 后台服务";
     string fun3 = "3. 网线布线助手";
+    string fun4 = "4. 保存图片";
     string ret = "0. 退出";
 
     cout<<title<<endl
@@ -23,6 +24,7 @@ int main_ui(){
         <<fun1<<endl
         <<fun2<<endl
         <<fun3<<endl
+        <<fun4<<endl
         <<ret<<endl;
 
     int n;
@@ -103,6 +105,13 @@ int sub1_2(){
 void sub1_2_1(){
     string title = "******北林自助导游及信息服务系统******";
     string sub_t = "------------查询最短路径------------";
+    cout<<title<<endl
+        <<sub_t<<endl;
+}
+
+void sub1_2_2(){
+    string title = "******北林自助导游及信息服务系统******";
+    string sub_t = "--------查询两点之间所有路径---------";
     cout<<title<<endl
         <<sub_t<<endl;
 }
