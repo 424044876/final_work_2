@@ -7,6 +7,7 @@
 
 #include <string>
 #include <iostream>
+#include <cstdio>
 #include "hush_password.h"
 
 using namespace std;
@@ -132,7 +133,14 @@ int sub2(){
     int flag = 0;
     for (int i = 0; i < 3; ++i) {
         string tmp;
-        cin>>tmp;
+        getchar();
+        for (int j = 0; j < 6; ++j) {
+            char t;
+            t = getch();
+            tmp.push_back(t);
+            cout<<'\b';
+            cout<<'*';
+        }
         long hush_tmp = hush_password(tmp);
         if(hush_tmp==password){
             flag = 1;

@@ -121,6 +121,8 @@ string
 -
 iostream
 -
+cstdio
+-
 hush_password.h
 /Users/fang/Desktop/c++/final_work_2/head/hush_password.h
 
