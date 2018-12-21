@@ -7,7 +7,7 @@
 
 
 #include "my_vector.h"
-
+#include <time.h>
 using namespace std;
 
 typedef struct dNode{
@@ -20,6 +20,9 @@ typedef struct dNode{
 
 void Dijsktra(Vector<Vector<int>> mat, Vector<dNode> &ans, int tar){
     //init
+    clock_t start,finish;
+    double totle_time;
+    start = clock();
     int v=mat.size()-1;
     dNode cur[v+1];
     cur[tar].flag= false;
@@ -61,7 +64,9 @@ void Dijsktra(Vector<Vector<int>> mat, Vector<dNode> &ans, int tar){
             }
         }
     }
-
+    finish = clock();
+    totle_time = (double)(finish-start);
+    cout<<"运行时间："<<totle_time<<"ms"<<endl;
 }
 
 
