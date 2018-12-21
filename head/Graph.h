@@ -64,7 +64,7 @@ public:
         hush_list.clear();
         for (int i = 1; i < places_num+1; ++i) {
             int hush_key = string_hush(places[i].get_name());
-            hush_list[hush_key].push_back(places[i]);
+            hush_list[hush_key].append(places[i]);
         }
     }
 
@@ -73,9 +73,9 @@ public:
         if(hush_list[key].empty()){
             return -1;
         }
-        for (auto i = hush_list[key].begin(); i != hush_list[key].end() ; ++i) {
-            if((*i).get_name()==name){
-                return (*i).get_key();
+        for (List<Node> *i = hush_list[key].get_next(); i != NULL ; i=i->get_next()) {
+            if(i->get_data().get_name()==name){
+                return (*i).get_data().get_key();
             }
         }
         return -1;
@@ -164,7 +164,7 @@ public:
             }
         }
         int hush_key = string_hush(places[places_num].get_name());
-        hush_list[hush_key].push_back(places[places_num]);
+        hush_list[hush_key].append(places[places_num]);
     }
 
     void add_road(string road_beg, string road_end, int road_length){

@@ -27,13 +27,11 @@ void Dijsktra(Vector<Vector<int>> mat, Vector<dNode> &ans, int tar){
         cur[i].length=mat[tar][i];
         cur[i].path[0]=tar;
         cur[i].node_num=0;
-        if(mat[tar][i]!=1e6){
-            cur[i].path[1]=i;
-            cur[i].node_num++;
-        }
+        cur[i].path[1]=i;
+        cur[i].node_num++;
     }
 
-    ans[0].length=1e6;
+    ans[0].length=1e7;
     for (int i = 1; i < v; ++i) {
         //select
         dNode min=ans[0];

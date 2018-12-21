@@ -9,8 +9,10 @@ CMakeFiles/final_work_2.dir/main.cpp.o: ../head/arc.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/binary_search.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/dijsktra.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/functions.h
+CMakeFiles/final_work_2.dir/main.cpp.o: ../head/hush_password.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/kmp.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/kruskal.h
+CMakeFiles/final_work_2.dir/main.cpp.o: ../head/my_list.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/my_vector.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/quick_sort.h
 CMakeFiles/final_work_2.dir/main.cpp.o: ../head/string_to_hush.h

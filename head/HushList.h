@@ -6,24 +6,24 @@
 #define FINAL_WORK_2_HUSHLIST_H
 
 #include <string>
-#include <list>
+//#include <list>
 
 #include "my_vector.h"
-
+#include "my_list.h"
 using namespace std;
 
 
 template <class T>
 class HushList{
 private:
-    Vector<list<T>> hl;
+    Vector<List<T>> hl;
 public:
     HushList(){
         hl.resize(50);
     }
     ~HushList(){}
 
-    list<T>& operator[](int n){
+    List<T>& operator[](int n){
         return hl[n];
     }
 

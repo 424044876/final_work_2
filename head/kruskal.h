@@ -24,7 +24,7 @@ int Kruskal(int v_num, Vector<Arc> &arcs, Vector<Arc> &ans){
 
     quick_sort(arcs, 1, arcs.size()-1);
     int j = 0;
-    for (int i = 1; i < arcs.size()-1; ++i) {
+    for (int i = 1; i < arcs.size(); ++i) {
         int a = arcs[i].get_ak();
         int b = arcs[i].get_bk();
         

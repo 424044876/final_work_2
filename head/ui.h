@@ -7,6 +7,7 @@
 
 #include <string>
 #include <iostream>
+#include "hush_password.h"
 
 using namespace std;
 
@@ -16,7 +17,7 @@ int main_ui(){
     string fun1 = "1. 前台服务";
     string fun2 = "2. 后台服务";
     string fun3 = "3. 网线布线助手";
-    string fun4 = "4. 保存图片";
+    string fun4 = "4. 保存信息";
     string ret = "0. 退出";
 
     cout<<title<<endl
@@ -123,7 +124,7 @@ int sub2(){
     string hint1 = "请输入六位密码（以回车结束）";
     string hint2 = "连续三次错误,输入r返回";
     string hint3 =  "输入r返回";
-    string password = "123456";
+    long password = 11860726;
 
     cout<<title<<endl
     <<sub_t<<endl
@@ -132,7 +133,8 @@ int sub2(){
     for (int i = 0; i < 3; ++i) {
         string tmp;
         cin>>tmp;
-        if(tmp==password){
+        long hush_tmp = hush_password(tmp);
+        if(hush_tmp==password){
             flag = 1;
             break;
         }

@@ -39,10 +39,10 @@ DFS_all_path.h
 /Users/fang/Desktop/c++/final_work_2/head/HushList.h
 string
 -
-list
--
 my_vector.h
 /Users/fang/Desktop/c++/final_work_2/head/my_vector.h
+my_list.h
+/Users/fang/Desktop/c++/final_work_2/head/my_list.h
 
 /Users/fang/Desktop/c++/final_work_2/head/Node.h
 string
@@ -70,6 +70,8 @@ Graph.h
 kmp.h
 /Users/fang/Desktop/c++/final_work_2/head/kmp.h
 
+/Users/fang/Desktop/c++/final_work_2/head/hush_password.h
+
 /Users/fang/Desktop/c++/final_work_2/head/kmp.h
 string
 -
@@ -83,6 +85,10 @@ arc.h
 /Users/fang/Desktop/c++/final_work_2/head/arc.h
 quick_sort.h
 /Users/fang/Desktop/c++/final_work_2/head/quick_sort.h
+
+/Users/fang/Desktop/c++/final_work_2/head/my_list.h
+iostream
+-
 
 /Users/fang/Desktop/c++/final_work_2/head/my_vector.h
 
@@ -113,6 +119,8 @@ string
 -
 iostream
 -
+hush_password.h
+/Users/fang/Desktop/c++/final_work_2/head/hush_password.h
 
 /Users/fang/Desktop/c++/final_work_2/head/work.h
 string
